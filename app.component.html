@@ -1,0 +1,14 @@
+<h1>Merge 2 images with canvas</h1>
+<input 
+  (change)="imageUpload($event)" 
+  type="file" 
+  multiple
+/>
+
+<div *ngIf="selectedImg.length">
+  <div *ngFor="let img of selectedImg">
+    <img [src]="img" />
+  </div>
+</div>
+
+<canvas #canvas class='d-none'></canvas>
